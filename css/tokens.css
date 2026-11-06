@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Design tokens — espejo de las variables de Figma
+   (colección "Colors" y "Spacing and radius")
+   ========================================================================== */
+:root {
+  /* Color · fondos */
+  --bg-base: #0e1a1c;
+  --bg-surface: #16272a;
+  --bg-surface-2: #203a3e;
+
+  /* Color · marca */
+  --primary: #ff9f7a;
+  --primary-hover: #ffbba0;
+  --primary-pressed: #e8825b;
+  --secondary: #9fd8c8;
+  --secondary-muted: #2e5a57;
+
+  /* Color · texto y bordes */
+  --text: #f4f0e8;
+  --text-muted: #b9c7c5;
+  --text-on-primary: #0e1a1c;
+  --border: #2c4348;
+
+  /* Color · estados */
+  --focus-ring: #9fd8c8;
+  --disabled-bg: #243538;
+  --disabled-text: #8ca09e;
+  --success: #7fd99a;
+  --error: #ff8a8a;
+
+  /* Tipografía */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Escala tipográfica (mobile → desktop) */
+  --fs-display: clamp(2.75rem, 1.6rem + 4.6vw, 4.5rem);   /* 44 → 72 */
+  --fs-h1: clamp(2.25rem, 1.5rem + 3vw, 3.5rem);          /* 36 → 56 */
+  --fs-h2: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem);        /* 28 → 40 */
+  --fs-h3: clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem);      /* 22 → 28 */
+  --fs-body-l: 1.125rem;  /* 18 */
+  --fs-body: 1rem;        /* 16 */
+  --fs-small: 0.875rem;   /* 14 */
+  --fs-caption: 0.75rem;  /* 12 */
+
+  /* Espaciado (múltiplos de 4 / 8) */
+  --space-1: 0.25rem;  /* 4 */
+  --space-2: 0.5rem;   /* 8 */
+  --space-3: 0.75rem;  /* 12 */
+  --space-4: 1rem;     /* 16 */
+  --space-6: 1.5rem;   /* 24 */
+  --space-8: 2rem;     /* 32 */
+  --space-12: 3rem;    /* 48 */
+  --space-16: 4rem;    /* 64 */
+  --space-24: 6rem;    /* 96 */
+
+  /* Radios */
+  --radius-sm: 0.5rem;   /* 8 */
+  --radius-md: 1rem;     /* 16 */
+  --radius-lg: 1.5rem;   /* 24 */
+  --radius-full: 999px;
+
+  /* Layout */
+  --container: 1152px;   /* 1280 − 2 × 64 de margen */
+  --gutter: 1rem;        /* mobile: 16 */
+  --header-h: 5rem;      /* alto de la barra fija + aire */
+
+  /* Movimiento */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur: 200ms;
+}
+
+@media (min-width: 48em) {   /* 768 px */
+  :root { --gutter: 2rem; }
+}
+@media (min-width: 80em) {   /* 1280 px */
+  :root { --gutter: 4rem; }
+}
