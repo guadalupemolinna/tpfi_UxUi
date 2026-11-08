@@ -1,42 +1,52 @@
 /* ==========================================================================
-   Componentes: botón (default, hover, pressed, focus, disabled)
+   Componentes — Botón (Figma: BOHO / Botón)
+   Primario y secundario × default, hover, pressed, focus, disabled
+   Alto 60 · padding lateral 24 · radio pill · Jost Medium 16
    ========================================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-2);
-  min-height: 2.75rem;               /* 44 px: área táctil mínima */
-  padding: var(--space-3) var(--space-6);
-  border: 2px solid transparent;
+  gap: var(--space-3);
+  min-height: var(--btn-h);
+  padding: 0 var(--space-6);
+  border: 1.5px solid transparent;
   border-radius: var(--radius-full);
   font-family: var(--font-body);
   font-size: var(--fs-label);
   font-weight: 500;
   line-height: var(--lh-label);
   text-decoration: none;
+  white-space: nowrap;
   cursor: pointer;
   transition: background-color var(--dur) var(--ease),
               border-color var(--dur) var(--ease),
               color var(--dur) var(--ease);
 }
 
-/* Primario: terracota */
-.btn--primary { background: var(--primary); color: var(--text-on-primary); }
-.btn--primary:hover { background: var(--primary-hover); color: var(--text-on-primary); }
-.btn--primary:active { background: var(--primary-pressed); }
+/* Focus del Figma: aro de 2 px en cacao, separado 4 px del botón */
+.btn:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 4px; }
+.surface-deep .btn:focus-visible { outline-color: var(--focus-ring-on-deep); }
 
-/* Secundario: contorno */
-.btn--secondary { background: transparent; color: var(--text); border-color: var(--border); }
+/* Ícono opcional (arrow-up-right, 18 px) */
+.btn__icon { width: 1.125rem; height: 1.125rem; flex: none; }
+
+/* Primario */
+.btn--primary { background: var(--primary); border-color: var(--primary); color: var(--text-on-primary); }
+.btn--primary:hover { background: var(--primary-hover); border-color: var(--primary-hover); color: var(--text-on-primary); }
+.btn--primary:active { background: var(--primary-pressed); border-color: var(--primary-pressed); }
+
+/* Secundario: contorno terracota sobre crema */
+.btn--secondary { background: var(--bg-base); border-color: var(--primary); color: var(--text); }
 .btn--secondary:hover { background: var(--bg-surface); color: var(--text); }
-.btn--secondary:active { background: var(--bg-surface); border-color: var(--text); }
+.btn--secondary:active { background: var(--bg-surface); border-color: var(--primary-pressed); }
 
-/* Deshabilitado: no interactivo */
+/* Deshabilitado */
 .btn[disabled],
 .btn[aria-disabled="true"] {
   background: var(--disabled-bg);
+  border-color: var(--disabled-bg);
   color: var(--disabled-text);
-  border-color: transparent;
   cursor: not-allowed;
   pointer-events: none;
 }

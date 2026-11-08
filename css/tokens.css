@@ -3,44 +3,56 @@
    (colección "Colors" y "Spacing and radius")
    ========================================================================== */
 :root {
-  /* Color · fondos */
-  --bg-base: #0e1a1c;
-  --bg-surface: #16272a;
-  --bg-surface-2: #203a3e;
+  /* Color · fondos (hoja 01 del Figma: Color y accesibilidad) */
+  --bg-base: #f3e9dc;        /* Crema / fondo: canvas */
+  --bg-surface: #e8d8c3;     /* Arena / fondo: tarjetas */
+  --bg-deep: #2e211a;        /* Cacao / fondo: secciones profundas */
 
   /* Color · marca */
-  --primary: #ff9f7a;
-  --primary-hover: #ffbba0;
-  --primary-pressed: #e8825b;
-  --secondary: #9fd8c8;
-  --secondary-muted: #2e5a57;
+  --primary: #a34a28;        /* Primario: acción (default) */
+  --primary-hover: #8b3d20;
+  --primary-pressed: #713019;
+  --secondary: #5c683c;      /* Secundario / éxito: oliva */
+  --accent-gold: #d9a441;    /* Mostaza: SOLO sobre cacao */
 
   /* Color · texto y bordes */
-  --text: #f4f0e8;
-  --text-muted: #b9c7c5;
-  --text-on-primary: #0e1a1c;
-  --border: #2c4348;
+  --text: #3b2a20;           /* Tinta */
+  --text-muted: #715e50;     /* Muted: SOLO sobre crema (5.1:1); sobre arena da 4.4:1 */
+  --text-on-primary: #f3e9dc;
+  --text-on-deep: #f3e9dc;
+  --border: #897360;         /* Borde / control (≥ 3:1) */
 
   /* Color · estados */
-  --focus-ring: #9fd8c8;
-  --disabled-bg: #243538;
-  --disabled-text: #8ca09e;
-  --success: #7fd99a;
-  --error: #ff8a8a;
+  --focus-ring: #2e211a;     /* 2 px + separación de 2 px */
+  --focus-ring-on-deep: #f3e9dc;  /* anillo sobre superficies cacao */
+  --disabled-bg: #ded3c4;
+  --disabled-text: #918577;  /* exento de contraste; no interactivo */
+  --success: #5c683c;
+  --error: #a33928;
 
-  /* Tipografía */
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Tipografía: Cormorant Garamond (titulares) × Jost (lectura e interfaz) */
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  /* Escala tipográfica (mobile → desktop) */
-  --fs-display: clamp(2.75rem, 1.6rem + 4.6vw, 4.5rem);   /* 44 → 72 */
-  --fs-h1: clamp(2.25rem, 1.5rem + 3vw, 3.5rem);          /* 36 → 56 */
-  --fs-h2: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem);        /* 28 → 40 */
-  --fs-h3: clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem);      /* 22 → 28 */
-  --fs-body-l: 1.125rem;  /* 18 */
-  --fs-body: 1rem;        /* 16 */
+  /* Escala tipográfica — mobile 375 → desktop 1280 (hoja 02 del Figma) */
+  --fs-display: clamp(3.25rem, 2.318rem + 3.978vw, 5.5rem);  /* 52 → 88 */
+  --fs-h1: clamp(2.5rem, 1.878rem + 2.652vw, 4rem);  /* 40 → 64 */
+  --fs-h2: clamp(2rem, 1.689rem + 1.326vw, 2.75rem);  /* 32 → 44 */
+  --fs-h3: clamp(1.5rem, 1.396rem + 0.442vw, 1.75rem);  /* 24 → 28 */
+  --fs-body-l: clamp(1.25rem, 1.198rem + 0.221vw, 1.375rem);  /* 20 → 22 */
+  --fs-body: clamp(1rem, 0.9482rem + 0.221vw, 1.125rem);  /* 16 → 18 */
+  --fs-label: 1rem;       /* 16 */
   --fs-small: 0.875rem;   /* 14 */
   --fs-caption: 0.75rem;  /* 12 */
+
+  /* Interlineado (multiplicador) */
+  --lh-display: 1;
+  --lh-h1: 1.05;
+  --lh-h2: 1.1;
+  --lh-h3: 1.15;
+  --lh-body: 1.5;
+  --lh-label: 1.25;
+  --lh-small: 1.45;
 
   /* Espaciado (múltiplos de 4 / 8) */
   --space-1: 0.25rem;  /* 4 */
@@ -57,12 +69,14 @@
   --radius-sm: 0.5rem;   /* 8 */
   --radius-md: 1rem;     /* 16 */
   --radius-lg: 1.5rem;   /* 24 */
+  --radius-xl: 2rem;     /* 32: tarjeta del hero en desktop */
   --radius-full: 999px;
 
   /* Layout */
   --container: 1152px;   /* 1280 − 2 × 64 de margen */
   --gutter: 1rem;        /* mobile: 16 */
-  --header-h: 5rem;      /* alto de la barra fija + aire */
+  --header-h: 5.25rem;   /* mobile: 16 de margen + 68 de barra */
+  --btn-h: 3.75rem;      /* alto de botón: 60 (Figma) */
 
   /* Movimiento */
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -71,6 +85,9 @@
 
 @media (min-width: 48em) {   /* 768 px */
   :root { --gutter: 2rem; }
+}
+@media (min-width: 64em) {   /* 1024 px */
+  :root { --header-h: 6.5rem; }   /* 16 de margen + 88 de barra */
 }
 @media (min-width: 80em) {   /* 1280 px */
   :root { --gutter: 4rem; }
