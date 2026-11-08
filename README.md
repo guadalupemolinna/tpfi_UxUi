@@ -3,22 +3,22 @@
 Portfolio web personal (one-page) — Trabajo Final de Diseño UX/UI 2026.
 
 ## Enlaces
-- **Sitio publicado:** https://guadalupemolinna.github.io/tpfi_UxUi/ _(se activa en el hito 12)_
+- **Sitio publicado:** _(agregar URL)_
 - **Figma (solo vista):** _(agregar link)_
 
 ## Stack
-HTML5 semántico · CSS3 (variables, Flexbox, Grid, mobile-first) · JavaScript vanilla (menú y modal) · GitHub Pages (deploy desde GitHub Actions).
+HTML5 semántico · CSS3 (variables, Flexbox, Grid, mobile-first) · JavaScript vanilla (menú) · deploy automático desde GitHub.
 
 ## Créditos y fuentes
-- Estructura inspirada en una plantilla de portfolio tipo bento: _(nombre y enlace de la plantilla)_. Se modificó la paleta, la tipografía, la composición y los componentes.
-- Tipografías: Fraunces y DM Sans (Google Fonts).
+- Estructura de información basada en el portfolio de referencia de la cátedra. La paleta, la tipografía, la composición y los componentes son propios.
+- Tipografías: Cormorant Garamond y Jost (Google Fonts).
 - Imágenes: _(listar fuentes)_.
 
 ## Uso de IA
-_(Declarar qué se generó con IA —código, textos— y cómo se revisó.)_
+Se usó Claude (Anthropic) como asistente para convertir el diseño de Figma en HTML/CSS y para redactar parte de los textos. _(Completar cómo revisaste y modificaste lo generado.)_
 
 ## Despliegue
-_(Se completa en el último hito.)_
+_(Completar según la plataforma elegida. Ejemplo con GitHub Pages: Settings → Pages → Source: GitHub Actions; cada push a `main` publica el sitio.)_
 
 ## Capturas y Lighthouse
-_(Agregar capturas Figma vs sitio y reporte Lighthouse mobile.)_
+_(Agregar capturas Figma / sitio de 2 secciones y el reporte de Lighthouse mobile.)_

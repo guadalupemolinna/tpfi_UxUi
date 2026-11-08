@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Caso de estudio (caso-openart.html) — sigue el Figma "Caso de estudio"
+   Usa solo tokens. Carga también hero.css (tarjeta + grilla de la portada).
+   ========================================================================== */
+
+/* Header: logo + etiqueta, y botón de volver */
+.site-header--case .site-header__wrap { justify-content: space-between; }
+.case-brand { display: flex; align-items: center; gap: var(--space-4); }
+.case-brand__label { font-size: var(--fs-small); }
+.site-header--case .btn { min-height: 2.75rem; padding-inline: var(--space-4); }
+@media (min-width: 64em) { .site-header--case .btn { min-height: 3.5rem; padding-inline: var(--space-6); } }
+
+/* Portada */
+.case-hero__top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); }
+.case-hero__kicker { max-width: none; font-size: var(--fs-small); letter-spacing: 0.04em; text-transform: uppercase; color: var(--primary-hover); }
+.case-hero .chip { min-width: 0; min-height: 2.5rem; padding-inline: var(--space-6); }
+.case-hero__rule { height: 1px; margin: 0; border: 0; background: var(--border); }
+.case-hero__byline { max-width: none; font-size: var(--fs-small); font-weight: 500; }
+
+.case-arch {
+  display: grid; place-content: center; gap: var(--space-3);
+  width: min(100%, 21.4375rem); min-height: 20rem; margin-inline: auto;
+  text-align: center;
+  background: var(--bg-deep); color: var(--text-on-deep);
+  border-radius: 171px 171px var(--radius-lg) var(--radius-lg);
+}
+.case-arch p { max-width: none; }
+.case-arch__label { font-size: var(--fs-small); text-transform: uppercase; }
+.case-arch__value { font-family: var(--font-display); font-size: 5rem; line-height: 1; color: var(--accent-gold); }
+@media (min-width: 64em) { .case-arch { width: auto; min-height: 0; margin-inline: 0; border-radius: 170px 170px var(--radius-lg) var(--radius-lg); } }
+
+/* Datos del proyecto */
+.case-facts { display: grid; gap: var(--space-4); margin: 0; }
+.case-facts dt { font-size: var(--fs-small); letter-spacing: 0.04em; text-transform: uppercase; color: var(--primary-hover); }
+.case-facts dd { margin: 0; font-size: var(--fs-body); }
+@media (min-width: 48em) { .case-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* Cabecera de cada sección numerada */
+.case-head { display: flex; align-items: baseline; gap: var(--space-3); margin-bottom: var(--space-4); }
+.case-head__num { font-size: var(--fs-small); color: var(--primary-hover); }
+.case-head__title { font-size: var(--fs-section); font-weight: 400; line-height: 1.1; }
+.case-lead { font-family: var(--font-display); font-size: var(--fs-h3); line-height: 1.25; max-width: none; }
+.case-text { font-size: var(--fs-body); line-height: 1.55; }
+
+/* 1. Problema */
+.case-split { display: grid; gap: var(--space-6); }
+.case-split__copy { display: grid; gap: var(--space-4); align-content: start; }
+.case-card { display: grid; gap: var(--space-4); align-content: start; padding: var(--space-6); background: var(--bg-surface); border-radius: var(--radius-xl); }
+.case-card__title { font-size: var(--fs-label); font-weight: 500; color: var(--primary-hover); }
+.case-boxes { display: flex; gap: var(--space-2); }
+.case-boxes span { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border: 1px solid var(--border); border-radius: var(--radius-sm); font-weight: 500; }
+.case-caption { max-width: none; font-size: var(--fs-small); }
+@media (min-width: 64em) { .case-split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-8); } }
+
+/* 2. Proceso */
+.deco-icon { width: 1.75rem; height: 1.75rem; color: var(--primary); }
+.case-steps { display: grid; gap: var(--space-4); align-items: start; margin-top: var(--space-6); }
+.case-step { display: grid; gap: var(--space-2); padding: var(--space-6); background: var(--bg-surface); border-radius: var(--radius-xl); }
+.case-step__kicker { font-size: var(--fs-small); font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--primary-hover); }
+.case-step__title { font-size: 2rem; font-weight: 500; line-height: 1.1; }
+.case-step p:last-child { max-width: none; font-size: var(--fs-label); line-height: 1.5; }
+@media (min-width: 48em) { .case-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6); } }
+
+/* 3. Solución */
+.case-solution { display: grid; gap: var(--space-6); margin-top: var(--space-6); align-items: start; }
+.case-flow { display: grid; gap: var(--space-3); }
+.case-flow__list { display: grid; gap: var(--space-3); }
+.case-flow__item { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3) var(--space-4); background: var(--bg-base); border-radius: var(--radius-md); }
+.case-flow__num { display: grid; place-items: center; flex: none; width: 2.5rem; height: 2.5rem; background: var(--bg-deep); color: var(--text-on-deep); border-radius: 50%; font-weight: 500; }
+.case-flow__item--accent .case-flow__num { background: var(--primary); color: var(--text-on-primary); }
+.case-flow__name { font-size: var(--fs-label); font-weight: 500; }
+.case-flow__desc { max-width: none; font-size: var(--fs-small); }
+
+/* Maqueta decorativa de la ficha de obra */
+.mock { display: grid; gap: var(--space-3); padding: var(--space-6); background: var(--bg-base); border: 1px solid var(--border); border-radius: var(--radius-xl); }
+.mock p { max-width: none; }
+.mock__bar { display: flex; justify-content: space-between; gap: var(--space-3); font-size: var(--fs-small); font-weight: 500; }
+.mock__bar span:last-child { color: var(--secondary); font-weight: 400; }
+.mock__progress { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); }
+.mock__progress span { height: 4px; background: var(--bg-surface); border-radius: 2px; }
+.mock__progress .is-done { background: var(--primary); }
+.mock__title { font-family: var(--font-display); font-size: 2.25rem; font-weight: 400; line-height: 1.1; }
+.mock__sub { font-size: var(--fs-small); color: var(--text-muted); }
+.mock__select { display: grid; gap: var(--space-3); padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--radius-md); }
+.mock__select strong { font-size: var(--fs-label); font-weight: 500; }
+.mock__select span { padding-left: var(--space-4); font-size: var(--fs-label); }
+.mock__select small { font-size: var(--fs-small); color: var(--text-muted); }
+.mock__label { font-size: var(--fs-label); font-weight: 500; }
+.mock__chips { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); }
+.mock__chips span { display: grid; place-items: center; min-height: 2.75rem; border: 1px solid var(--primary); border-radius: var(--radius-full); font-size: var(--fs-small); font-weight: 500; }
+.mock__chips .is-on { background: var(--primary); color: var(--text-on-primary); }
+.mock__note { font-size: var(--fs-small); color: var(--text-muted); }
+.mock__cta { display: flex; align-items: center; justify-content: center; gap: var(--space-3); min-height: 3.5rem; background: var(--primary); color: var(--text-on-primary); border-radius: var(--radius-full); font-weight: 500; }
+@media (min-width: 64em) { .case-solution { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-8); } }
+
+/* Cierre y pie */
+.case-end { display: grid; gap: var(--space-4); align-items: center; padding: var(--space-6); background: var(--bg-surface); border-radius: var(--radius-xl); }
+.case-end__text { font-family: var(--font-display); font-size: var(--fs-h2); line-height: 1.1; }
+.case-end__text em { font-style: italic; }
+.case-footer { display: grid; gap: var(--space-2); padding-block: var(--space-6) var(--space-8); border-top: 1px solid var(--border); font-size: var(--fs-small); }
+.case-footer p { max-width: none; }
+.case-footer__tag { color: var(--primary-hover); }
+@media (min-width: 64em) {
+  .case-end { grid-template-columns: 1fr auto; padding: var(--space-8) 3rem; }
+  .case-footer { grid-template-columns: 1fr auto; }
+}
