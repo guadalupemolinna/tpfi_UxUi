@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Componentes — Botón (Figma: BOHO / Botón)
-   Primario y secundario × default, hover, pressed, focus, disabled
-   Alto 60 · padding lateral 24 · radio pill · Jost Medium 16
-   ========================================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -85,4 +80,14 @@
   .section-head { margin-bottom: var(--space-8); }
   .section-head__title { line-height: 1.08; }
   .section-head__desc { display: none; }   /* el Figma desktop no la muestra */
+}
+
+/* Cabecera partida (Proyectos): título a la izquierda, bajada a la derecha */
+@media (min-width: 48em) {
+  .section-head--split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 22.5rem);   /* bajada de 360 */
+    align-items: end;
+    gap: var(--space-6);
+  }
+  .section-head--split .section-head__desc { display: block; }
 }

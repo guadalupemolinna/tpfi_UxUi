@@ -1,7 +1,3 @@
-/* ==========================================================================
-   Design tokens — espejo de las variables de Figma
-   (colección "Colors" y "Spacing and radius")
-   ========================================================================== */
 :root {
   /* Color · fondos (hoja 01 del Figma: Color y accesibilidad) */
   --bg-base: #f3e9dc;        /* Crema / fondo: canvas */
