@@ -12,7 +12,7 @@
   --primary: #a34a28;        /* Primario: acción (default) */
   --primary-hover: #8b3d20;
   --primary-pressed: #713019;
-  --secondary: #5c683c;      /* Secundario / éxito: oliva */
+  --secondary: #5c6b3c;      /* Secundario / éxito: oliva */
   --accent-gold: #d9a441;    /* Mostaza: SOLO sobre cacao */
 
   /* Color · texto y bordes */
@@ -27,7 +27,7 @@
   --focus-ring-on-deep: #f3e9dc;  /* anillo sobre superficies cacao */
   --disabled-bg: #ded3c4;
   --disabled-text: #918577;  /* exento de contraste; no interactivo */
-  --success: #5c683c;
+  --success: #5c6b3c;
   --error: #a33928;
 
   /* Tipografía: Cormorant Garamond (titulares) × Jost (lectura e interfaz) */
@@ -37,6 +37,7 @@
   /* Escala tipográfica — mobile 375 → desktop 1280 (hoja 02 del Figma) */
   --fs-display: clamp(3.25rem, 2.318rem + 3.978vw, 5.5rem);  /* 52 → 88 */
   --fs-h1: clamp(2.5rem, 1.878rem + 2.652vw, 4rem);  /* 40 → 64 */
+  --fs-section: clamp(2.5rem, 2.086rem + 1.768vw, 3.5rem);  /* 40 → 56: título de sección (Figma) */
   --fs-h2: clamp(2rem, 1.689rem + 1.326vw, 2.75rem);  /* 32 → 44 */
   --fs-h3: clamp(1.5rem, 1.396rem + 0.442vw, 1.75rem);  /* 24 → 28 */
   --fs-body-l: clamp(1.25rem, 1.198rem + 0.221vw, 1.375rem);  /* 20 → 22 */

@@ -1,0 +1,104 @@
+/* ==========================================================================
+   Hero (#inicio) — Figma: "Hero card" + "Retrato en arco"
+   Mobile: tarjeta arriba, retrato abajo · Desktop: tarjeta + retrato de 340 px
+   ========================================================================== */
+main > section.hero {
+  padding-top: calc(var(--header-h) + var(--space-4));
+}
+
+.hero__grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.hero__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+/* Disponibilidad + ubicación */
+.hero__meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: none;
+  font-size: var(--fs-caption);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--text);
+}
+.hero__status { color: var(--primary-hover); }
+
+/* Título: 40 → 72 px (Cormorant Garamond Medium) */
+.hero__title {
+  font-size: clamp(2.5rem, 1.671rem + 3.536vw, 4.5rem);
+  line-height: 1.08;
+  text-wrap: wrap;
+}
+.hero__name { display: block; }
+
+.hero__lead {
+  max-width: none;
+  font-size: var(--fs-body);
+  line-height: 1.55;
+}
+
+.hero__cta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* Retrato en arco: borde #715e50, radio superior = mitad del ancho */
+.hero__portrait {
+  position: relative;
+  width: min(100%, 21.4375rem);    /* 343 */
+  height: 25rem;                   /* 400 */
+  margin-inline: auto;
+  overflow: hidden;
+  border: 1px solid var(--text-muted);
+  border-radius: 171px 171px var(--radius-lg) var(--radius-lg);
+}
+.hero__portrait img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+@media (min-width: 48em) {
+  .hero__cta { flex-direction: row; flex-wrap: wrap; }
+  .hero__cta .btn { min-width: 13.75rem; }   /* 220 */
+}
+
+@media (min-width: 64em) {
+  main > section.hero { padding-top: calc(var(--header-h) + var(--space-6)); }
+
+  .hero__grid {
+    grid-template-columns: minmax(0, 1fr) 21.25rem;   /* 340 */
+    align-items: stretch;
+  }
+  .hero__card {
+    min-height: 29.5rem;           /* 472 */
+    padding: 3.5rem;               /* 56 */
+    border-radius: var(--radius-xl);
+  }
+  .hero__meta { flex-direction: row; gap: var(--space-6); }
+  .hero__name { display: inline; }
+
+  .hero__portrait {
+    width: auto;
+    height: auto;
+    margin-inline: 0;
+    border-width: 3px;
+    border-radius: 170px 170px var(--radius-lg) var(--radius-lg);
+  }
+}
