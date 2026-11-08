@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Header fijo: logo, navegación por anclas, GitHub, CTA y menú hamburguesa
+   Mobile-first
+   ========================================================================== */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--bg-base) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: calc(var(--header-h) - var(--space-4));
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.logo:hover { color: var(--primary); }
+
+/* Botón hamburguesa (solo mobile) */
+.nav-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  background: transparent;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+}
+.nav-toggle__icon,
+.nav-toggle__icon::before,
+.nav-toggle__icon::after {
+  display: block;
+  width: 1.125rem;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform var(--dur) var(--ease), background-color var(--dur) var(--ease);
+}
+.nav-toggle__icon { position: relative; }
+.nav-toggle__icon::before,
+.nav-toggle__icon::after { content: ""; position: absolute; left: 0; }
+.nav-toggle__icon::before { top: -6px; }
+.nav-toggle__icon::after  { top: 6px; }
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon { background: transparent; }
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon::before { transform: translateY(6px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon::after  { transform: translateY(-6px) rotate(-45deg); }
+
+/* Panel de navegación en mobile */
+.site-nav {
+  display: none;
+  padding-block: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--border);
+}
+.site-nav.is-open { display: block; }
+
+.site-nav__list { display: grid; gap: var(--space-1); }
+.site-nav__link {
+  display: block;
+  padding: var(--space-3) var(--space-2);
+  color: var(--text);
+  font-size: var(--fs-body);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+}
+.site-nav__link:hover { color: var(--primary); background: var(--bg-surface); }
+.site-nav__link[aria-current="true"] { color: var(--primary); font-weight: 500; }
+
+.site-nav__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.icon-link {
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--text);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-full);
+}
+.icon-link:hover { color: var(--text); background: var(--bg-surface); }
+.icon-link svg { width: 1.25rem; height: 1.25rem; fill: currentColor; }
+
+/* Desktop: barra horizontal, sin hamburguesa */
+@media (min-width: 64em) {   /* 1024 px */
+  .nav-toggle { display: none; }
+
+  .site-nav,
+  .site-nav.is-open {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+    padding: 0;
+    border-top: 0;
+  }
+  .site-nav__list { display: flex; gap: var(--space-1); margin-inline: auto; }
+  .site-nav__link { padding: var(--space-2) var(--space-3); font-size: var(--fs-label); }
+  .site-nav__actions { margin-top: 0; }
+}
+
+/* En mobile el panel cae debajo de la barra */
+@media (max-width: 63.99em) {
+  .site-header .container { display: block; }
+}
+
+/* El header es fijo: la primera sección deja lugar para que no tape el título */
+main > section:first-child { padding-top: calc(var(--header-h) + var(--space-8)); }
+
+/* Estado :active en los controles del header (lo pide la consigna) */
+.nav-toggle:hover, .icon-link:hover { background: var(--bg-surface); }
+.nav-toggle:active, .icon-link:active { background: var(--bg-surface); border-color: var(--text); }
+.site-nav__link:active { background: var(--bg-surface); color: var(--primary-pressed); }

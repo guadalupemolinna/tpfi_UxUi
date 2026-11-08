@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Componentes: botón (default, hover, pressed, focus, disabled)
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;               /* 44 px: área táctil mínima */
+  padding: var(--space-3) var(--space-6);
+  border: 2px solid transparent;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
+  font-weight: 500;
+  line-height: var(--lh-label);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--dur) var(--ease),
+              border-color var(--dur) var(--ease),
+              color var(--dur) var(--ease);
+}
+
+/* Primario: terracota */
+.btn--primary { background: var(--primary); color: var(--text-on-primary); }
+.btn--primary:hover { background: var(--primary-hover); color: var(--text-on-primary); }
+.btn--primary:active { background: var(--primary-pressed); }
+
+/* Secundario: contorno */
+.btn--secondary { background: transparent; color: var(--text); border-color: var(--border); }
+.btn--secondary:hover { background: var(--bg-surface); color: var(--text); }
+.btn--secondary:active { background: var(--bg-surface); border-color: var(--text); }
+
+/* Deshabilitado: no interactivo */
+.btn[disabled],
+.btn[aria-disabled="true"] {
+  background: var(--disabled-bg);
+  color: var(--disabled-text);
+  border-color: transparent;
+  cursor: not-allowed;
+  pointer-events: none;
+}
