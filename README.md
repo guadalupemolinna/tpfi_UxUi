@@ -14,8 +14,7 @@ HTML5 semántico · CSS3 (variables, Flexbox, Grid, mobile-first) · JavaScript 
 - Tipografías: Cormorant Garamond y Jost (Google Fonts).
 
 ## Uso de IA
-Se usó Claude (Anthropic) como asistente para convertir el diseño de Figma en HTML/CSS y para redactar parte de los textos. _(Completar cómo revisaste y modificaste lo generado.)_
-
+Se usó Claude (Anthropic) como asistente para convertir el diseño de Figma en HTML/CSS y para redactar parte de los textos. 
 ## Despliegue
 GitHub Pages: Settings → Pages → Source: GitHub Actions; cada push a `main` publica el sitio.)_
 
