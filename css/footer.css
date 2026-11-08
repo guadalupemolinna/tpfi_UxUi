@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Footer — tarjeta arena: logo + navegación, y fila legal
+   ========================================================================== */
+.site-footer { padding-bottom: var(--space-6); }
+.site-footer__card {
+  display: grid;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+}
+.site-footer__top, .site-footer__bottom { display: grid; gap: var(--space-4); }
+.site-footer__rule { height: 1px; margin: 0; border: 0; background: var(--border); }
+.site-footer__nav { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); }
+.site-footer a:not(.logo) { color: var(--text); font-size: var(--fs-small); font-weight: 500; text-decoration: none; }
+.site-footer a:not(.logo):hover { color: var(--primary-hover); text-decoration: underline; text-underline-offset: 0.2em; }
+.site-footer__links { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-6); }
+.site-footer__legal, .site-footer__credit { max-width: none; font-size: var(--fs-small); }
+
+@media (min-width: 64em) {
+  .site-footer__card { padding: var(--space-8) 3rem; }
+  .site-footer__top, .site-footer__bottom { grid-template-columns: auto auto; justify-content: space-between; align-items: center; }
+}

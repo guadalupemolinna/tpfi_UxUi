@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Experiencia — título a la izquierda, línea de tiempo a la derecha (≥ 1024 px)
+   También define .eyebrow, que usan Sobre mí y Contacto.
+   ========================================================================== */
+.eyebrow {
+  margin: 0;
+  max-width: none;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary-hover);
+}
+
+.exp { display: grid; gap: var(--space-8); }
+.exp__intro { display: grid; gap: var(--space-3); align-content: start; }
+.exp__title { font-size: var(--fs-section); font-weight: 400; line-height: 1.08; }
+.exp__desc { color: var(--text-muted); font-size: var(--fs-label); }
+
+.timeline {
+  display: grid;
+  gap: var(--space-8);
+  padding-left: var(--space-6);
+  border-left: 1px solid var(--border);
+}
+.timeline__item { position: relative; display: grid; gap: var(--space-2); }
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  top: 0.35rem;
+  left: calc(-1 * var(--space-6) - 5.5px);
+  width: 10px;
+  height: 10px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+.timeline__period { font-size: var(--fs-small); color: var(--text-muted); }
+.timeline__title { font-size: var(--fs-h3); font-weight: 500; line-height: 1.15; }
+.timeline__list { display: grid; gap: var(--space-1); font-size: var(--fs-label); line-height: 1.45; }
+.timeline__list li { display: flex; gap: var(--space-2); }
+.timeline__list li::before { content: "·"; color: var(--primary); }
+
+@media (min-width: 64em) {
+  .exp { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--space-12); }
+}

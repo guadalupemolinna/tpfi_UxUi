@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Contacto — bloque terracota con CTA + tarjeta con formulario
+   Mobile: apilados · Desktop (≥ 1024 px): 7/5
+   ========================================================================== */
+.contact { display: grid; gap: var(--space-6); }
+
+.contact__cta {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+  padding: var(--space-8) var(--space-6);
+  background: var(--primary);
+  color: var(--text-on-primary);
+  border-radius: var(--radius-xl);
+}
+.contact__cta .eyebrow { color: var(--text-on-primary); }
+.contact__cta :focus-visible { outline-color: var(--focus-ring-on-deep); }
+.contact__title { font-size: var(--fs-section); font-weight: 400; line-height: 1.08; }
+
+.contact__mail {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  color: var(--text-on-primary);
+  overflow-wrap: anywhere;
+}
+.contact__mail:hover { color: var(--text-on-primary); text-decoration-thickness: 2px; }
+
+.contact__social { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.contact__social a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 1.25rem;
+  background: var(--bg-deep);
+  color: var(--text-on-deep);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.contact__social a:hover { background: var(--bg-surface); color: var(--text); }
+
+.contact__form-card {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+  padding: var(--space-6);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+}
+.contact__form-title { font-size: var(--fs-h3); font-weight: 400; }
+.contact__form { display: grid; gap: var(--space-4); }
+
+.field { display: grid; gap: var(--space-2); }
+.field__label { font-size: var(--fs-small); font-weight: 500; }
+.field__input {
+  width: 100%;
+  min-height: 3.5rem;
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-base);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font: inherit;
+  font-size: var(--fs-label);
+}
+.field__input::placeholder { color: var(--text-muted); opacity: 1; }
+.field__input:hover { border-color: var(--text); }
+textarea.field__input { min-height: 7.5rem; resize: vertical; }
+.contact__form .btn { width: 100%; }
+
+@media (min-width: 64em) {
+  .contact { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+  .contact__cta { padding: 3.5rem; }
+  .contact__form-card { padding: var(--space-8); }
+}

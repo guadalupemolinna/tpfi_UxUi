@@ -30,6 +30,10 @@
   <link rel="stylesheet" href="css/metrics.css">
   <link rel="stylesheet" href="css/skills.css">
   <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/experience.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -37,7 +41,7 @@
   
   <header class="site-header">
     <div class="site-header__wrap">
-      <a class="logo" href="#inicio" aria-label="Guadalupe Molina, ir al inicio">GM<span class="logo__name" aria-hidden="true"> · Guadalupe Molina</span></a>
+      <a class="logo" href="#inicio" aria-label="Guadalupe Molina, ir al inicio">GM<span class="logo__name" aria-hidden="true"></span></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
         <span class="nav-toggle__icon" aria-hidden="true"></span>
       </button>
@@ -170,7 +174,7 @@
           <div class="skill__card">
             <svg class="skill__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></svg>
             <h3 class="skill__title">Herramientas &amp; Métodos</h3>
-            <ul class="skill__list"><li>Figma</li><li>Miro</li><li>Notion</li></ul>
+            <ul class="skill__list"><li>Figma</li><li>FigJam</li><li>Notion</li></ul>
             <hr class="skill__divider">
             <p class="skill__desc">Stack para diseño, colaboración y documentación.</p>
           </div>
@@ -227,7 +231,7 @@
               <p>Proyecto académico</p>
               <p>Cotizador dinámico · Básico / Plus / Premium · pago simulado.</p>
             </div>
-            <a class="project__link" href="https://github.com/guadalupemolinna" target="_blank" rel="noopener noreferrer">Ver en GitHub ↗<span class="visually-hidden"> el proyecto Cubrí Seguros</span> <span class="visually-hidden">(se abre en otra pestaña)</span></a>
+            <a class="project__link" href="https://github.com/guadalupemolinna/guadalupemolinna.github.io" target="_blank" rel="noopener noreferrer">Ver en GitHub ↗<span class="visually-hidden"> el proyecto Cubrí Seguros</span> <span class="visually-hidden">(se abre en otra pestaña)</span></a>
           </div>
           <ul class="project__tags" aria-label="Herramientas y temas de Cubrí Seguros">
           <li class="chip">HTML5</li>
@@ -250,7 +254,7 @@
               <p>Proyecto académico</p>
               <p>Jerarquía visual, diseño responsive y branding experiencial.</p>
             </div>
-            <a class="project__link" href="https://github.com/guadalupemolinna/coffea-landing/tree/main" target="_blank" rel="noopener noreferrer">Ver demo ↗<span class="visually-hidden"> de Coffea</span> <span class="visually-hidden">(se abre en otra pestaña)</span></a>
+            <a class="project__link" href="https://coffeeaalanding.netlify.app/" target="_blank" rel="noopener noreferrer">Ver demo ↗<span class="visually-hidden"> de Coffea</span> <span class="visually-hidden">(se abre en otra pestaña)</span></a>
           </div>
           <ul class="project__tags" aria-label="Herramientas y temas de Coffea">
           <li class="chip">UI Design</li>
@@ -265,22 +269,129 @@
 
     
     <section id="experiencia" aria-labelledby="titulo-experiencia">
-      <div class="container"><h2 id="titulo-experiencia">Experiencia y formación</h2></div>
+      <div class="container exp">
+        <div class="exp__intro">
+          <p class="eyebrow">Experiencia</p>
+          <h2 id="titulo-experiencia" class="exp__title">Un recorrido en capas.</h2>
+          <p class="exp__desc">Cada etapa sumó una forma distinta de mirar al usuario.</p>
+        </div>
+        <ol class="timeline">
+          <li class="timeline__item">
+            <p class="timeline__period"><time datetime="2026">2026</time></p>
+            <h3 class="timeline__title">UX/UI Designer · OpenArt</h3>
+            <ul class="timeline__list"><li>Diseñé el canal de venta directa y el checkout de arte digital.</li><li>Testeé el prototipo con 3 participantes y validé el contraste.</li></ul>
+          </li>
+          <li class="timeline__item">
+            <p class="timeline__period"><time datetime="2026">2026</time></p>
+            <h3 class="timeline__title">Front-end · Cubrí Seguros</h3>
+            <ul class="timeline__list"><li>Desarrollé un cotizador dinámico y un checkout multipaso.</li><li>Integré planes Básico/Plus/Premium, validaciones en línea y pago simulado.</li></ul>
+          </li>
+          <li class="timeline__item">
+            <p class="timeline__period"><time datetime="2026">2026</time></p>
+            <h3 class="timeline__title">Diseño UI · Coffea</h3>
+            <ul class="timeline__list"><li>Diseñé una landing page de alta fidelidad para café de especialidad.</li><li>Prioricé jerarquía visual, diseño responsive y branding experiencial.</li></ul>
+          </li>
+          <li class="timeline__item">
+            <p class="timeline__period">En formación</p>
+            <h3 class="timeline__title">Estudiante · Formación UX/UI</h3>
+            <ul class="timeline__list"><li>3 años de estudio.</li><li>5+ cursos.</li></ul>
+          </li>
+        </ol>
+      </div>
     </section>
 
     
     <section id="sobre-mi" aria-labelledby="titulo-sobre-mi">
-      <div class="container"><h2 id="titulo-sobre-mi">Sobre mí</h2></div>
+      <div class="container about">
+        <figure class="about__portrait">
+          <img src="assets/img/retrato.avif" alt="Retrato de Guadalupe Molina, estudiante de diseño UX/UI" width="340" height="472" loading="lazy">
+        </figure>
+        <div class="about__content">
+          <div class="about__panel">
+            <p class="eyebrow">Sobre mí</p>
+            <h2 id="titulo-sobre-mi" class="about__title">De la investigación visual al prototipo funcional.</h2>
+            <p class="about__text">Estudiante de Sistemas de Información apasionada por el diseño UX/UI. Creo interfaces limpias, accesibles y consistentes, uniendo el pensamiento analítico de sistemas con la sensibilidad del diseño visual.</p>
+          </div>
+          <div class="principles">
+          <article class="principle">
+            <svg class="deco-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="14" cy="14" r="5"/><path d="M14 3v3M14 22v3M3 14h3M22 14h3M6.2 6.2l2.1 2.1M19.7 19.7l2.1 2.1M6.2 21.8l2.1-2.1M19.7 8.3l2.1-2.1"/></svg>
+            <h3 class="principle__title">Empatía</h3>
+            <p class="principle__lead">Escucho antes de proponer.</p>
+            <p class="principle__text">Convertir preguntas en una comprensión compartida del problema.</p>
+          </article>
+          <article class="principle">
+            <svg class="deco-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="14" cy="14" r="5"/><path d="M14 3v3M14 22v3M3 14h3M22 14h3M6.2 6.2l2.1 2.1M19.7 19.7l2.1 2.1M6.2 21.8l2.1-2.1M19.7 8.3l2.1-2.1"/></svg>
+            <h3 class="principle__title">Claridad</h3>
+            <p class="principle__lead">Si no se entiende en segundos, se rediseña.</p>
+            <p class="principle__text">Priorizo legibilidad, jerarquía y flujo claro.</p>
+          </article>
+          <article class="principle">
+            <svg class="deco-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="14" cy="14" r="5"/><path d="M14 3v3M14 22v3M3 14h3M22 14h3M6.2 6.2l2.1 2.1M19.7 19.7l2.1 2.1M6.2 21.8l2.1-2.1M19.7 8.3l2.1-2.1"/></svg>
+            <h3 class="principle__title">Cuidado</h3>
+            <p class="principle__lead">Contraste, foco y tamaños pensados desde el inicio.</p>
+            <p class="principle__text">WCAG, legibilidad y usabilidad para todos los usuarios.</p>
+          </article>
+          </div>
+        </div>
+      </div>
     </section>
 
     
     <section id="contacto" aria-labelledby="titulo-contacto">
-      <div class="container"><h2 id="titulo-contacto">Contacto</h2></div>
+      <div class="container contact">
+        <div class="contact__cta">
+          <p class="eyebrow">Contacto</p>
+          <h2 id="titulo-contacto" class="contact__title">¿Hablamos de tu próximo proyecto?</h2>
+          <a class="contact__mail" href="mailto:guadamolina@ej.com">guadamolina@ej.com</a>
+          <div class="contact__social">
+            <a href="https://www.linkedin.com/in/guadalupe-molina-425739409/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+          </div>
+        </div>
+        <div class="contact__form-card">
+          <h3 class="contact__form-title">O escribime desde acá</h3>
+          <form class="contact__form" action="mailto:guadamolina@ej.com" method="post" enctype="text/plain">
+            <div class="field">
+              <label class="field__label" for="nombre">Nombre</label>
+              <input class="field__input" id="nombre" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label class="field__label" for="email">Email</label>
+              <input class="field__input" id="email" name="email" type="email" placeholder="Tu email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label class="field__label" for="mensaje">Mensaje</label>
+              <textarea class="field__input" id="mensaje" name="mensaje" rows="4" placeholder="Contame qué necesitás" required></textarea>
+            </div>
+            <button class="btn btn--primary" type="submit">Enviar mensaje <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></button>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
 
   
-  <footer class="site-footer"></footer>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__card">
+        <div class="site-footer__top">
+          <a class="logo" href="#inicio" aria-label="Guadalupe Molina, ir al inicio">GM</a>
+          <nav class="site-footer__nav" aria-label="Pie de página">
+            <a href="#inicio">Inicio</a><a href="#skills">Skills</a><a href="#proyectos">Proyectos</a><a href="#experiencia">Experiencia</a><a href="#sobre-mi">Sobre mí</a><a href="#contacto">Contacto</a>
+          </nav>
+        </div>
+        <hr class="site-footer__rule">
+        <div class="site-footer__bottom">
+          <p class="site-footer__legal">© 2026 Guadalupe Molina. Todos los derechos reservados.</p>
+          <div class="site-footer__links">
+            <a href="https://www.linkedin.com/in/guadalupe-molina-425739409/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+            <a href="https://www.instagram.com/TU-USUARIO" target="_blank" rel="noopener noreferrer">Instagram<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+            <p class="site-footer__credit">Diseñado en Figma · Maquetado con HTML y CSS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/menu.js" defer></script>
 </body>
