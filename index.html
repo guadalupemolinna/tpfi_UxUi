@@ -345,27 +345,25 @@
           </div>
         </div>
         <div class="contact__form-card">
-         <h3 class="contact__form-title">O escribime desde acá</h3>
-          <!-- Recordá poner tu endpoint real de Formspree -->
-          <form action="https://formspree.io/f/mbggvdyw" method="POST" class="contact-form">
-            <div class="form-group">
-              <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+        <h3 class="contact__form-title">O escribime desde acá</h3>
+        <form action="https://formspree.io/f/mbggvdyw" method="POST" class="contact__form">
+            <div class="field">
+               <label for="nombre" class="field__label">Nombre</label>
+               <input type="text" id="nombre" name="nombre" class="field__input" required placeholder="Tu nombre">
+             </div>
+            <div class="field">
+             <label for="email" class="field__label">Correo electrónico</label>
+              <input type="email" id="email" name="email" class="field__input" required placeholder="tu@email.com">
             </div>
 
-            <div class="form-group">
-              <label for="email">Correo electrónico</label>
-              <input type="email" id="email" name="email" required placeholder="tu@email.com">
-            </div>
+         <div class="field">
+            <label for="mensaje" class="field__label">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" class="field__input" rows="5" required placeholder="Escribí tu mensaje aquí..."></textarea>
+       </div>
 
-            <div class="form-group">
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribí tu mensaje aquí..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-          </form>
-        </div>
+      <button type="submit" class="btn">Enviar mensaje</button>
+    </form>
+  </div>
       </section>
     </main>
 
