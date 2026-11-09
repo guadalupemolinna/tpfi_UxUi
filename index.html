@@ -345,50 +345,57 @@
           </div>
         </div>
         <div class="contact__form-card">
-          <h3 class="contact__form-title">O escribime desde acá</h3>
-          <form class="contact__form" action="https://formspree.io/f/mbggvdyw" method="POST">
-            <div class="field">
-              <label class="field__label" for="nombre">Nombre</label>
-              <input class="field__input" id="nombre" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required>
+         <h3 class="contact__form-title">O escribime desde acá</h3>
+          <!-- Recordá poner tu endpoint real de Formspree -->
+          <form action="https://formspree.io/f/mbggvdyw" method="POST" class="contact-form">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
             </div>
-            <div class="field">
-              <label class="field__label" for="email">Email</label>
-              <input class="field__input" id="email" name="email" type="email" placeholder="Tu email" autocomplete="email" required>
+
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" required placeholder="tu@email.com">
             </div>
-            <div class="field">
-              <label class="field__label" for="mensaje">Mensaje</label>
-              <textarea class="field__input" id="mensaje" name="mensaje" rows="4" placeholder="Contame qué necesitás" required></textarea>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribí tu mensaje aquí..."></textarea>
             </div>
-            <button class="btn btn--primary" type="submit">Enviar mensaje <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></button>
+
+            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
           </form>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  
-  <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__card">
-        <div class="site-footer__top">
-          <a class="logo" href="#inicio" aria-label="Guadalupe Molina, ir al inicio">GM</a>
-          <nav class="site-footer__nav" aria-label="Pie de página">
-            <a href="#inicio">Inicio</a><a href="#skills">Skills</a><a href="#proyectos">Proyectos</a><a href="#experiencia">Experiencia</a><a href="#sobre-mi">Sobre mí</a><a href="#contacto">Contacto</a>
-          </nav>
-        </div>
-        <hr class="site-footer__rule">
-        <div class="site-footer__bottom">
-          <p class="site-footer__legal">© 2026 Guadalupe Molina. Todos los derechos reservados.</p>
-          <div class="site-footer__links">
-            <a href="https://www.linkedin.com/in/guadalupe-molina-425739409/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
-            <a href="https://www.instagram.com/TU-USUARIO" target="_blank" rel="noopener noreferrer">Instagram<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
-            <p class="site-footer__credit">Diseñado en Figma · Maquetado con HTML y CSS</p>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__card">
+          <div class="site-footer__top">
+            <a class="logo" href="#inicio" aria-label="Guadalupe Molina, ir al inicio">GM</a>
+            <nav class="site-footer__nav" aria-label="Pie de página">
+              <a href="#inicio">Inicio</a>
+              <a href="#skills">Skills</a>
+              <a href="#proyectos">Proyectos</a>
+              <a href="#experiencia">Experiencia</a>
+              <a href="#sobre-mi">Sobre mí</a>
+              <a href="#contacto">Contacto</a>
+            </nav>
+          </div>
+          <hr class="site-footer__rule">
+          <div class="site-footer__bottom">
+            <p class="site-footer__legal">© 2026 Guadalupe Molina. Todos los derechos reservados.</p>
+            <div class="site-footer__links">
+              <a href="https://www.linkedin.com/in/guadalupe-molina-425739409/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+              <a href="https://github.com/guadalupemolinna" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+              <p class="site-footer__credit">Diseñado en Figma · Maquetado con HTML y CSS</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="js/menu.js" defer></script>
-</body>
+    <script src="js/menu.js" defer></script>
+  </body>
 </html>
