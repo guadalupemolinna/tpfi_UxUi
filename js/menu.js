@@ -9,7 +9,6 @@
   const setOpen = (open) => {
     if (header) header.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
     nav.classList.toggle('is-open', open);
   };
 
@@ -17,7 +16,6 @@
     setOpen(toggle.getAttribute('aria-expanded') !== 'true');
   });
 
-  // Cerrar con Escape (y devolver el foco al botón)
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
       setOpen(false);

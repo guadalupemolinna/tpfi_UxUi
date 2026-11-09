@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cubrí Seguros: flujo de contratación digital · Caso de estudio</title>
+  <meta name="description" content="Checkout multipaso para contratar un seguro de celular: cotizador dinámico, planes, validaciones en línea y pago simulado. Caso de estudio por Guadalupe Molina.">
+  <meta name="theme-color" content="#f3e9dc">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/case.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header site-header--case">
+    <div class="site-header__wrap">
+      <div class="case-brand">
+        <a class="logo" href="index.html" aria-label="Guadalupe Molina, ir al inicio">GM</a>
+        <span class="case-brand__label">Caso de estudio</span>
+      </div>
+      <a class="btn btn--primary" href="index.html#proyectos">← Volver al inicio</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <section class="hero case-hero" aria-labelledby="caso-titulo">
+      <div class="container hero__grid">
+        <div class="hero__card">
+          <div class="case-hero__top">
+            <p class="case-hero__kicker">Portfolio / 2026</p>
+            <p class="chip">Front-end</p>
+          </div>
+          <h1 class="hero__title" id="caso-titulo">Cubrí Seguros — Flujo de <em>contratación</em> digital</h1>
+          <p class="hero__lead">Checkout multipaso para contratar un seguro de celular: cotizar, elegir plan, cargar datos y pagar sin perder el hilo.</p>
+          <hr class="case-hero__rule">
+          <p class="case-hero__byline">Guadalupe Molina · UX/UI Designer</p>
+        </div>
+        <div class="case-arch surface-deep">
+          <p class="case-arch__label">Pantallas</p>
+          <p class="case-arch__value">7</p>
+          <p>en mobile y desktop</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Datos del proyecto">
+      <div class="container">
+        <dl class="case-facts">
+          <div><dt>Rol</dt><dd>UX/UI + Front-end</dd></div>
+          <div><dt>Stack</dt><dd>HTML · Tailwind CSS · Basecoat UI · JavaScript</dd></div>
+          <div><dt>Foco</dt><dd>Contratación de punta a punta</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="problema" aria-labelledby="problema-titulo">
+      <div class="container">
+        <div class="case-head"><span class="case-head__num" aria-hidden="true">01</span><h2 class="case-head__title" id="problema-titulo">El problema</h2></div>
+        <div class="case-split">
+          <div class="case-split__copy">
+            <p class="case-lead">Contratar un seguro online no debería sentirse como llenar un trámite.</p>
+            <p class="case-text">El desafío: acompañar a una persona desde la cotización hasta el número de póliza, en mobile y en desktop, sin que pierda datos, contexto ni confianza en el camino.</p>
+          </div>
+          <div class="case-card">
+            <h3 class="case-card__title">Qué había que resolver</h3>
+            <ul class="case-list">
+              <li>Cotizar con pocos datos y ver el precio enseguida.</li>
+              <li>Comparar tres planes sin dudas sobre qué cubre cada uno.</li>
+              <li>Mostrar los errores en el momento justo, no al final.</li>
+              <li>Poder volver atrás sin perder lo cargado.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso" aria-labelledby="proceso-titulo">
+      <div class="container">
+        <div class="case-head"><span class="case-head__num" aria-hidden="true">02</span><h2 class="case-head__title" id="proceso-titulo">El proceso</h2></div>
+        <ol class="case-steps">
+          <li class="case-step">
+            <p class="case-step__kicker">Del Figma al código</p>
+            <h3 class="case-step__title">Mobile first</h3>
+            <p class="case-step__desc">Siete pantallas diseñadas en 390 px y en 1440 px, maquetadas con los mismos componentes y tokens en ambos tamaños.</p>
+          </li>
+          <li class="case-step">
+            <p class="case-step__kicker">Sistema</p>
+            <h3 class="case-step__title">Componentes y tokens</h3>
+            <p class="case-step__desc">Basecoat UI para botones, campos y tarjetas; Tailwind para el layout; el stepper armado a mano con tres estados.</p>
+          </li>
+          <li class="case-step">
+            <p class="case-step__kicker">Lógica</p>
+            <h3 class="case-step__title">Un solo estado</h3>
+            <p class="case-step__desc">Un único objeto guarda todo el flujo y cada paso se pinta a partir de él, así el resumen y las cuotas nunca se contradicen.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="solucion" aria-labelledby="solucion-titulo">
+      <div class="container">
+        <div class="case-head"><span class="case-head__num" aria-hidden="true">03</span><h2 class="case-head__title" id="solucion-titulo">La solución</h2></div>
+        <p class="case-lead">Un checkout guiado en cuatro pasos, con el resumen siempre a la vista.</p>
+        <p class="case-text">El stepper muestra dónde estás, los botones se habilitan solo cuando el paso es válido y cada error aparece al salir del campo.</p>
+        <div class="case-solution">
+          <div class="case-card case-flow">
+            <h3 class="case-card__title">Recorrido</h3>
+            <ol class="case-flow__list">
+              <li class="case-flow__item"><span class="case-flow__num">1</span><div><p class="case-flow__name">Cotizar</p><p class="case-flow__desc">Marca, modelo, valor y antigüedad del equipo</p></div></li>
+              <li class="case-flow__item case-flow__item--accent"><span class="case-flow__num">2</span><div><p class="case-flow__name">Elegir plan</p><p class="case-flow__desc">Básico, Plus o Premium con la cuota calculada</p></div></li>
+              <li class="case-flow__item"><span class="case-flow__num">3</span><div><p class="case-flow__name">Datos personales</p><p class="case-flow__desc">Titular, contacto y términos, con errores en línea</p></div></li>
+              <li class="case-flow__item"><span class="case-flow__num">4</span><div><p class="case-flow__name">Pago</p><p class="case-flow__desc">Tarjeta simulada: póliza si se aprueba, error recuperable si no</p></div></li>
+            </ol>
+            <p class="case-text">Si el pago falla, se vuelve al paso 4 con todos los datos cargados.</p>
+          </div>
+          <figure>
+            <div class="mock" role="img" aria-label="Pantalla Elegir plan de Cubrí Seguros: paso 2 de 4, planes Básico, Plus y Premium con Plus seleccionado y botón Continuar con tus datos.">
+              <p class="mock__bar"><span>Cubrí Seguros · Elegir plan</span><span>Paso 2 de 4</span></p>
+              <div class="mock__progress mock__progress--4"><span class="is-done"></span><span class="is-done"></span><span></span><span></span></div>
+              <p class="mock__title">Elegí tu plan</p>
+              <p class="mock__sub">Seguro de celular · Cuota mensual</p>
+              <div class="mock__chips"><span>Básico</span><span class="is-on">Plus</span><span>Premium</span></div>
+              <p class="mock__note">Plus, recomendado: robo con violencia y rotura de pantalla. $ 3.000 por mes para un equipo de $ 600.000 con menos de 1 año.</p>
+              <p class="mock__cta">Continuar con tus datos <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></p>
+            </div>
+            <figcaption class="case-caption">Reconstrucción visual de la pantalla para este caso de estudio.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="resultado" aria-labelledby="resultado-titulo">
+      <div class="container">
+        <div class="case-head"><span class="case-head__num" aria-hidden="true">04</span><h2 class="case-head__title" id="resultado-titulo">Resultado y aprendizajes</h2></div>
+        <p class="case-lead">Una sola función calcula las cuotas y coincide con los casos de prueba del enunciado.</p>
+        <div class="case-split">
+          <div class="case-card">
+            <h3 class="case-card__title">Cuota mensual de ejemplo</h3>
+            <div class="case-table-wrap">
+              <table class="case-table">
+                <caption class="visually-hidden">Cuota mensual por plan según valor y antigüedad del equipo</caption>
+                <thead><tr><th scope="col">Equipo</th><th scope="col">Básico</th><th scope="col">Plus</th><th scope="col">Premium</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">$ 600.000 · menos de 1 año</th><td>$ 2.000</td><td>$ 3.000</td><td>$ 4.500</td></tr>
+                  <tr><th scope="row">$ 600.000 · 1 a 2 años</th><td>$ 2.200</td><td>$ 3.300</td><td>$ 4.950</td></tr>
+                  <tr><th scope="row">$ 1.200.000 · más de 2 años</th><td>$ 5.000</td><td>$ 7.500</td><td>$ 11.250</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="case-card">
+            <h3 class="case-card__title">Qué me llevo</h3>
+            <!-- Completá con aprendizajes propios y, si los tenés, hallazgos de tu test de usabilidad -->
+            <ul class="case-list">
+              <li>Un único estado evita que el resumen y los planes muestren precios distintos.</li>
+              <li>Validar al salir del campo da feedback sin interrumpir mientras se escribe.</li>
+              <li>Un botón deshabilitado necesita explicar qué falta para habilitarse.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Cierre del caso">
+      <div class="container">
+        <div class="case-end">
+          <p class="case-end__text">Menos pasos perdidos. Más <em>confianza</em> al contratar.</p>
+          <a class="btn btn--primary" href="index.html#proyectos">← Volver al inicio</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container case-footer">
+      <div>
+        <p><strong>Guadalupe Molina · UX/UI Designer</strong></p>
+        <p>© 2026 Guadalupe Molina.</p>
+      </div>
+      <p class="case-footer__tag">Cubrí Seguros · Proyecto académico · 2026</p>
+    </div>
+  </footer>
+</body>
+</html>
